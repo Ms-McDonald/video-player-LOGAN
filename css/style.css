@@ -1,82 +1,77 @@
-
 body {
-background: linear-gradient(135deg, #007bff, #00aaff);
-color: #fff;
-font-family: Arial, sans-serif;
-overflow: hidden; 
+  background: linear-gradient(135deg, #bb88b4, #a80b00);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.container {
+  max-width: 1200px;
+}
 
 .main-video {
-width: 100%;
-background-color: #0e1a2b;
-aspect-ratio: 16 / 9;
+  width: 100%;
+  background-color: #0e1a2b;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-
-.video-placeholder {
-height: 100%;
-text-align: center;
-color: #cfd8dc;
+.side-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-
-.play-btn {
-background: #00b4ff;
-border: none;
-color: white;
-font-size: 3rem;
-border-radius: 50%;
-width: 80px;
-height: 80px;
-cursor: pointer;
-transition: 0.3s;
-}
-.play-btn:hover {
-background: #0091cc;
-}
-
 
 .video-option {
-background-color: #1c2a3b;
-color: #cfd8dc;
-height: 110px;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: 0.3s;
+  background-color: #1c2a3b;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
 }
+
 .video-option:hover {
-background-color: #27415c;
-cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
 }
 
-
-.play-btn-sm {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background: #00b4ff;
-border: none;
-color: white;
-font-size: 1.5rem;
-border-radius: 50%;
-width: 45px;
-height: 45px;
-cursor: pointer;
-transition: 0.3s;
+.video-option video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.3s;
 }
-.play-btn-sm:hover {
-background: #0091cc;
+
+.video-option:hover video {
+  opacity: 1;
+}
+
+.main-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .option-text {
-position: absolute;
-bottom: 8px;
-left: 0;
-right: 0;
-text-align: center;
-font-size: 0.9rem;
-color: #cfd8dc;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cfd8dc;
+  background: rgba(0,0,0,0.5);
+  padding: 4px;
+  border-radius: 0 0 12px 12px;
 }
